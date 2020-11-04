@@ -18,7 +18,11 @@ const handleUserInput = (input) => {
     connection.write('Move: right');
   } else if (input === 's') {//down
     connection.write('Move: down');
-  }
+  }  else if (input === 'o') {
+    connection.write('Say: Out of my way!');
+  } else if (input === 'k') {
+    connection.write('Say: Keup up!');
+  } 
 };
 
 
