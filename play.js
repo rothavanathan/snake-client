@@ -1,4 +1,3 @@
-const net = require('net');
 const {connect} = require('./client');
 const {setupInput} = require('./input');
 
@@ -8,16 +7,4 @@ const {setupInput} = require('./input');
  */
 console.log('Connecting ...');
 const conn = connect();
-setupInput();
-
-
-const moveOnce = (direction) => {
-  conn.write(`Move: ${direction}`)
-}
-
-const move = (direction) => {
-  setInterval(() => moveOnce(direction), 50);
-}
-
-
-
+setupInput(conn);
